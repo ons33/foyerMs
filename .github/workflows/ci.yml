@@ -25,10 +25,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16.17.0'  # Use your local Node.js version
+        node-version: '16.17.0'
 
     - name: Install dependencies
       run: npm install
+
+    - name: Set Jest permissions
+      run: chmod +x ./node_modules/.bin/jest
 
     - name: Run unit and integration tests
       run: npm run test
