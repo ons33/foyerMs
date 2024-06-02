@@ -10,7 +10,10 @@
     "test": "jest --setupFilesAfterEnv=./setupTests.js"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "keywords": [],
   "author": "",
